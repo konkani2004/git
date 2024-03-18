@@ -1,0 +1,128 @@
+Administrator@DESKTOP-AV2PARO MINGW64 ~
+$ mkdir sneha
+mkdir: cannot create directory ‘sneha’: File exists
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~
+$ mkdir sn
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~
+$ cd sn
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/sn/.git/
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn (main)
+$ ls -a
+./  ../  .git/
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn (main)
+$ touch b.c
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn (main)
+$ git add .
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn (main)
+$ git commit -m"hi"
+[main (root-commit) e21c2d3] hi
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b.c
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn (main)
+$ git log
+commit e21c2d3047ad11f9d41bd6d444a99052e1bdd4cc (HEAD -> main)
+Author: snehal <konkani1313@gmail.com>
+Date:   Mon Mar 18 12:49:23 2024 +0530
+
+    hi
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn (main)
+$ git clone https://github.com/konkani2004/CS-AlliedBranches.git
+Cloning into 'CS-AlliedBranches'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 10 (delta 0), reused 0 (delta 0), pack-reused 9
+Receiving objects: 100% (10/10), done.
+Resolving deltas: 100% (1/1), done.
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn (main)
+$ ls
+CS-AlliedBranches/  b.c
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn (main)
+$ cd CS-AlliedBranches/
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (main)
+$ git branch
+* main
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (main)
+$ git branch p1
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (main)
+$ git checkout p1
+Switched to branch 'p1'
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (p1)
+$ touch c.c
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (p1)
+$ git add .
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (p1)
+$ git commit -m"bye"
+[p1 76c2084] bye
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c.c
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (p1)
+$ git log
+commit 76c20849069988184f6b99aeae8b0c02b4443b45 (HEAD -> p1)
+Author: snehal <konkani1313@gmail.com>
+Date:   Mon Mar 18 12:52:57 2024 +0530
+
+    bye
+
+commit 6dab1b0bec92e3b0dbd1511d9424f2a1eea43a55 (origin/main, origin/HEAD, main)
+Merge: 5942fcb 0c33190
+Author: Arjungs1524 <arjungs15@gmail.com>
+Date:   Mon Jan 29 10:53:32 2024 +0530
+
+    Merge pull request #3 from Arjun252gs/patch-1
+
+    added enable_password_less_auth.txt
+
+commit 0c33190778c5ca3d285caae2f613c873fe5c18d4
+Author: Arjun252gs <120630691+Arjun252gs@users.noreply.github.com>
+Date:   Mon Jan 29 10:14:33 2024 +0530
+
+    Create enable_password_less_auth.txt
+
+commit 5942fcbf42db0c63d369381ce4d9e169400a7a44
+Author: ubuntu <ubuntu@ubuntu2.myguest.virtualbox.org>
+Date:   Sat Nov 11 22:40:00 2023 +0530
+
+    Commit No.one
+
+commit 0b9a8d143787e41e936b5f464cb9178944a0de09
+Author: Arjungs1524 <arjungs15@gmail.com>
+Date:   Sat Nov 11 22:32:39 2023 +0530
+
+    Initial commit
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (p1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (main)
+$ git merge p1
+Updating 6dab1b0..76c2084
+Fast-forward
+ c.c | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c.c
+
+Administrator@DESKTOP-AV2PARO MINGW64 ~/sn/CS-AlliedBranches (main)
+$ git rebase 0b9a8d143787e41e936b5f464cb9178944a0de09
+Successfully rebased and updated refs/heads/main.
